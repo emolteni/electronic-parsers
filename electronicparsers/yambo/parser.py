@@ -553,6 +553,8 @@ class InputParser(TextParser):
 class OutputParser(TextParser):
     def __init__(self):
         super().__init__()
+    def init_quantities(self):
+        re_f = r'[-+]*\d*\.\d+[Ee]*[-+]*\d*'
         self._quantities = [
             Quantity(  
                 'spectra',
